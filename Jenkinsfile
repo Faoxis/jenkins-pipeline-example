@@ -3,13 +3,13 @@ pipeline {
 	stages {
 		stage('Init') {
 			steps {
-				echo 'Testing...'
+				sh './gradlew test'
 			}
 		}
 
 		stage('Build') {
 			steps {
-				echo 'Building...'
+				sh './gradlew build'
 			}
 		}
 

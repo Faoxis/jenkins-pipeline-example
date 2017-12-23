@@ -1,0 +1,4 @@
+.idea
+out
+build
+jenkins-pipeline-example.iml
