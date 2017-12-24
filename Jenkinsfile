@@ -13,6 +13,18 @@ pipeline {
 			}
 		}
 
+		stage('Docker test') {
+			steps {
+				sh """ docker --version """
+			}
+		}
+
+		stage('Build docker image') {
+			steps {
+				sh './gradlew dockerBuildImage --stacktrace --info'
+			}
+		}
+
 		stage('Deploy') {
 			steps {
 				echo 'Deploying...'
